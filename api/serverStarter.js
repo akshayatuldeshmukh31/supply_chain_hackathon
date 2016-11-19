@@ -26,7 +26,7 @@ function startExpressServer(){
 	});
 
 	//Function call to load routes
-	//routeLoader.loadAppRoutes(app);
+	routeLoader.loadAppRoutes(app);
 }
 
 //Function to start MongoDB server and initialize collections in Mongo interfaces

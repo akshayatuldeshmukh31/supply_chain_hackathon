@@ -4,3 +4,39 @@
 {"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.502Z"}
 {"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.503Z"}
 {"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.503Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-19T23:22:12.747Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T23:22:12.764Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:22:12.775Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:22:12.775Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:22:12.775Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:22:12.776Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-19T23:23:21.929Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T23:23:21.944Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:23:21.955Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:23:21.955Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:23:21.955Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:23:21.956Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-19T23:24:10.362Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T23:24:10.379Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:10.389Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:10.389Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:10.389Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:10.390Z"}
+{"date":"Sat Nov 19 2016 15:24:57 GMT-0800 (PST)","process":{"pid":6636,"uid":1000,"gid":1000,"cwd":"/home/akshayd31/CPRQ/Hackathon/jam_sc","execPath":"/usr/bin/nodejs","version":"v6.9.1","argv":["/usr/bin/nodejs","/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js"],"memoryUsage":{"rss":43425792,"heapTotal":23105536,"heapUsed":16113472}},"os":{"loadavg":[0.4599609375,0.46630859375,0.49169921875],"uptime":10085},"trace":[{"column":11,"file":"util.js","function":"Object.exports._errnoException","line":1026,"method":"exports._errnoException","native":false},{"column":20,"file":"util.js","function":"exports._exceptionWithHostPort","line":1049,"method":"_exceptionWithHostPort","native":false},{"column":14,"file":"net.js","function":"Server._listen2","line":1257,"method":"_listen2","native":false},{"column":10,"file":"net.js","function":"listen","line":1293,"method":null,"native":false},{"column":5,"file":"net.js","function":"Server.listen","line":1389,"method":"listen","native":false},{"column":24,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/node_modules/express/lib/application.js","function":"EventEmitter.listen","line":617,"method":"listen","native":false},{"column":15,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/api/serverStarter.js","function":"Object.startExpressServer","line":21,"method":"startExpressServer","native":false},{"column":15,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js","function":"","line":3,"method":null,"native":false},{"column":32,"file":"module.js","function":"Module._compile","line":570,"method":"_compile","native":false},{"column":10,"file":"module.js","function":"Object.Module._extensions..js","line":579,"method":"Module._extensions..js","native":false}],"stack":["Error: listen EADDRINUSE :::3000","    at Object.exports._errnoException (util.js:1026:11)","    at exports._exceptionWithHostPort (util.js:1049:20)","    at Server._listen2 (net.js:1257:14)","    at listen (net.js:1293:10)","    at Server.listen (net.js:1389:5)","    at EventEmitter.listen (/home/akshayd31/CPRQ/Hackathon/jam_sc/node_modules/express/lib/application.js:617:24)","    at Object.startExpressServer (/home/akshayd31/CPRQ/Hackathon/jam_sc/api/serverStarter.js:21:15)","    at Object.<anonymous> (/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js:3:15)","    at Module._compile (module.js:570:32)","    at Object.Module._extensions..js (module.js:579:10)"],"level":"error","message":"uncaughtException: listen EADDRINUSE :::3000","timestamp":"2016-11-19T23:24:57.324Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T23:24:57.345Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:57.356Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:57.356Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:57.357Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:24:57.357Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-19T23:25:33.148Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T23:25:33.164Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:25:33.174Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:25:33.175Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:25:33.175Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:25:33.175Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-19T23:30:08.566Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T23:30:08.587Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.598Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.599Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.599Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.599Z"}
