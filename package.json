@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "watchify app/app.js -o public/js/bundle.js --debug --verbose"
+    "watch": "watchify app/app.js -o public/js/bundle.js --debug --verbose",
+    "start": "node startup.js"
   },
   "repository": {
     "type": "git",

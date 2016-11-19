@@ -1,0 +1,23 @@
+.ng-scope {
+    height: inherit;    
+}
+
+#app-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#app-wrapper #content {
+    flex: 1;
+}
+
+#header.navbar {
+    margin-bottom: 0;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
