@@ -1,0 +1,6 @@
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-19T22:59:56.475Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-19T22:59:56.492Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.502Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.502Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.503Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T22:59:56.503Z"}
