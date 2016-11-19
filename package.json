@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "watchify app/app.js -o public/js/bundle.js --debug --verbose"
+    "watch": "watchify app/app.js -o public/js/bundle.js --debug --verbose",
+    "start": "node startup.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-ui-router": "^0.3.2",
-    "bootstrap": "^3.3.7"
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11"
   }
 }
