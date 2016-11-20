@@ -38,3 +38,8 @@ drayage .jumbotron, register .jumbotron, distributor .jumbotron, store .jumbotro
 register .jumbotron {
     width: 70%;
 }
+
+.blueBack
+{
+    background-color: #337ab7;
+}
