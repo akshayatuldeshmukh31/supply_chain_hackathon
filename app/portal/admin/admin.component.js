@@ -10,6 +10,14 @@ angular.module('portApp')
         }, function(response) {
             console.error('F!');
         });
+
+        $scope.approveUser = function(username){
+             $http.post('http://localhost:3000/portadmin/pendingApprovals', {userName: username,token: authService.getToken()}).then(function(response) {
+//            $scope.approvals = response.data.pendingApprovals;
+        }, function(response) {
+            console.error('F!');
+        });
+        }
     },
     bindings: {
         makeAppointment: '<'
