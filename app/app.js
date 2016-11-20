@@ -46,11 +46,9 @@ app.config(['$stateProvider', '$urlRouterProvider',
                         userName: $scope.username,
                         password: $scope.password
                     }).then(function(response) {
-                        console.log(response);
                         authService.setToken(response.data.token);
                         $state.transitionTo('portal.' + response.data.role);
                     }, function(response) {
-                        alert("NOOOO");
                     });
                 };
             }
