@@ -8,7 +8,7 @@ var express = require('express');
 var statusCodes = require('../config/statusCodes');
 var config = require('/home/akshayd31/CPRQ/config');
 var companyRoutes = require("./companyRoutes");
-// var drayageRoutes = require("./drayageRoutes");
+var drayageRoutes = require("./drayageRoutes");
 // var shippingRoutes = require("./shippingRoutes");
 var portMtoRoutes = require("./portMtoRoutes");
 var portAdminRoutes = require("./portAdminRoutes");
@@ -29,7 +29,7 @@ function loadAppRoutes(app){
 	app.use("/store", companyRoutes);
 
 	//Load routes which require authorization (secured access)
-	// app.use("/drayage", drayageRoutes);
+	app.use("/drayage", drayageRoutes);
 
 	// app.use("/shippingline", shippingRoutes);
 	app.use("/portmto", portMtoRoutes);
