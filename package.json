@@ -17,10 +17,14 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
     "angular-ui-router": "^0.3.2",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
-    "mongodb": "^2.2.11"
+    "jsonwebtoken": "^7.1.9",
+    "mongodb": "^2.2.11",
+    "path": "^0.12.7",
+    "winston": "^2.3.0"
   }
 }
