@@ -68,6 +68,7 @@ function loadAppRoutes(app){
 							"role": req.body.role,
 							"pointOfContact": req.body.pointOfContact,
 							"email": req.body.email,
+							"company": req.body.company,
 							"isApproved": "Pending"					
 						}));
 

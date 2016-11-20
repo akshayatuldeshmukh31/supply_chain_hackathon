@@ -18,7 +18,7 @@ angular.module('portApp')
         });
 
         $http.post('http://localhost:3000/portmto/newArrivals', {token: authService.getToken()}).then(function(response) {
-            $scope.fillData = response.data;
+            $scope.fillData = response.data.containers;
 
         }, function(response) {
             console.error('F!');
@@ -27,12 +27,12 @@ angular.module('portApp')
         $scope.updateData = function(row){
             $http.post('http://localhost:3000/portmto/updateLocationImp', {
                 "container#" : row['container#'],
-                "lotNumber" : row.lotno,
-                "berthNumber" : row.berthno,
-                "lastDayForPickup" : row.lastdayfor,
+                "lotNumber" : row.lotNumber,
+                "berthNumber" : row.berthNumber,
+                "lastDayForPickup" : row.lastDayForPickup,
                 token: authService.getToken()
             }).then(function(response) {
-
+                alert("Update Successful");
                 console.log("Works");
             }, function(response) {
                 console.error('F!');

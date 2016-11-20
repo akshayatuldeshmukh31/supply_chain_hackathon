@@ -170,7 +170,8 @@ secureRouter.post('/postArrivals', function(req, res){
     "lastDayForPickup": lastPickup,
     "customStatus": "Cleared",
     "lotNumber": "A1",
-    "berthNumber": "A1-C6"
+    "berthNumber": "A1-C6",
+    "hasArrived": true
   }));
 
   var counter = 0;
@@ -185,6 +186,60 @@ secureRouter.post('/postArrivals', function(req, res){
       res.send(JSON.stringify({
         "success": -1,
         "error": null
+      }));
+    }
+  });
+});
+
+secureRouter.post('/newArrivals', function(req, res){
+  importInfoCollection = initData.returnImportInfoCollection();
+
+  var jsonQuery = JSON.parse(JSON.stringify({
+    "hasArrived": true,
+    "isPickedUp": false
+  }));
+
+  dbFuncs.searchAllDetails(importInfoCollection, jsonQuery, function(code, cursor, message){
+    if(code=="1"){
+      res.send(JSON.stringify({
+        "success": 1,
+        "error": null,
+        "containers": cursor
+      }));
+    }
+    else{
+      res.send(JSON.stringify({
+        "success": -1,
+        "error": null,
+      }));
+    }
+  });
+});
+
+secureRouter.post('/updateLocationImp', function(req, res){
+  importInfoCollection = initData.returnImportInfoCollection();
+
+  var jsonQuery = JSON.parse(JSON.stringify({
+    "container#": req.body['container#']
+  }));
+
+  var jsonEntry = JSON.parse(JSON.stringify({
+    "lotNumber": req.body.lotNumber,
+    "berthNumber": req.body.berthNumber,
+    "lastDayForPickup": req.body.lastDayForPickup
+  }));
+
+  dbFuncs.updateDetails(importInfoCollection, jsonQuery, jsonEntry, function(code, message){
+    if(code=="1"){
+      res.send(JSON.stringify({
+        "success": 1,
+        "error": null
+      }));
+    }
+    else{
+      res.send(JSON.stringify({
+        "success": -1,
+        "error": message
       }));
     }
   });

@@ -8,9 +8,11 @@ angular.module('portApp')
         this.searched = true;
         this.makeAppointment = true;
         this.detailsWidth = this.makeAppointment ? 'col-xs-6': 'col-xs-12';
-        $http.get("congressCall.php?choice=1&subchoice=1")
-        .then(function(response) {
-            $scope.tasks = response.data;
-        })
+        $http.post('http://localhost:3000/portmto/newArrivals', {token: authService.getToken()}).then(function(response) {
+            $scope.tasks = response.data.containers;
+
+        }, function(response) {
+            console.error('F!');
+        });
     }
 });

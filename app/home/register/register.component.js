@@ -9,9 +9,9 @@ angular.module('portApp')
                 userName: $scope.username,
                 password: $scope.password,
                 role: $scope.role,
-                pointOfContact: $scope.fullName,
+                pointOfContact: $scope.fullname,
                 email: $scope.email,
-                companyName: $scope.companyName
+                company: $scope.companyName
             }).then(function(response) {
                 alert('YAY!');
             }, function(response) {
