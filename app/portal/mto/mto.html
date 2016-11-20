@@ -7,9 +7,9 @@
             <form name="arrived">
                 <div class="form-group">
                     <label for="vessel">Vessel Name</label>
-                    <input type="text" ng-model="arrived" class="form-control" name="arrived" placeholder="Vessel Name">
+                    <input type="text"  class="form-control" name="arrived" placeholder="Vessel Name" ng-model="shipArrived">
                 </div>
-                <button class="btn btn-primary" ng-click="hasArrived(arrived)" align="center">Submit</button>
+                <button class="btn btn-primary" ng-click="hasArrived(shipArrived)" align="center">Submit</button>
             </form>
         </uib-tab>
         <uib-tab index="3" heading="Post Arrival Export">
