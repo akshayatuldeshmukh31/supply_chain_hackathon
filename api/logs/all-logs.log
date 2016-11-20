@@ -585,3 +585,76 @@
 {"level":"info","message":"[object Object]: Search op successful for null","timestamp":"2016-11-20T12:30:30.619Z"}
 {"level":"info","message":"/viewData: Retrieved list of imports","timestamp":"2016-11-20T12:30:30.620Z"}
 {"level":"info","message":"[object Object]: Update op successful for [object Object] and [object Object]","timestamp":"2016-11-20T12:30:38.961Z"}
+{"date":"Sun Nov 20 2016 04:44:56 GMT-0800 (PST)","process":{"pid":15500,"uid":1000,"gid":1000,"cwd":"/home/akshayd31/CPRQ/Hackathon/jam_sc","execPath":"/usr/bin/nodejs","version":"v6.9.1","argv":["/usr/bin/nodejs","/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js"],"memoryUsage":{"rss":38981632,"heapTotal":21008384,"heapUsed":12355936}},"os":{"loadavg":[0.212890625,0.21533203125,0.22900390625],"uptime":58084},"trace":[{"column":16,"file":"vm.js","function":"Object.exports.runInThisContext","line":76,"method":"exports.runInThisContext","native":false},{"column":28,"file":"module.js","function":"Module._compile","line":542,"method":"_compile","native":false},{"column":10,"file":"module.js","function":"Object.Module._extensions..js","line":579,"method":"Module._extensions..js","native":false},{"column":32,"file":"module.js","function":"Module.load","line":487,"method":"load","native":false},{"column":12,"file":"module.js","function":"tryModuleLoad","line":446,"method":null,"native":false},{"column":3,"file":"module.js","function":"Function.Module._load","line":438,"method":"Module._load","native":false},{"column":17,"file":"module.js","function":"Module.require","line":497,"method":"require","native":false},{"column":19,"file":"internal/module.js","function":"require","line":20,"method":null,"native":false},{"column":21,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/api/routes/initializeRoutes.js","function":"","line":10,"method":null,"native":false},{"column":32,"file":"module.js","function":"Module._compile","line":570,"method":"_compile","native":false}],"stack":["/home/akshayd31/CPRQ/Hackathon/jam_sc/api/routes/companyRoutes.js:60","    \"billOfLading#\": req.body.billOfLading#","                                          ^","SyntaxError: Invalid or unexpected token","    at Object.exports.runInThisContext (vm.js:76:16)","    at Module._compile (module.js:542:28)","    at Object.Module._extensions..js (module.js:579:10)","    at Module.load (module.js:487:32)","    at tryModuleLoad (module.js:446:12)","    at Function.Module._load (module.js:438:3)","    at Module.require (module.js:497:17)","    at require (internal/module.js:20:19)","    at Object.<anonymous> (/home/akshayd31/CPRQ/Hackathon/jam_sc/api/routes/initializeRoutes.js:10:21)","    at Module._compile (module.js:570:32)"],"level":"error","message":"uncaughtException: Invalid or unexpected token","timestamp":"2016-11-20T12:44:56.009Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T12:46:18.536Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T12:46:18.552Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:46:18.563Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:46:18.563Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:46:18.563Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:46:18.563Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:46:18.563Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T12:49:10.629Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T12:49:10.648Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:49:10.658Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:49:10.658Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:49:10.658Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:49:10.658Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:49:10.659Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T12:49:22.919Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:49:22.921Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T12:49:22.921Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T12:51:33.276Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T12:51:33.291Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:51:33.303Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:51:33.304Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:51:33.304Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:51:33.304Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:51:33.304Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T12:52:06.985Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:52:06.987Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T12:52:06.990Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T12:53:38.794Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T12:53:38.810Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:53:38.821Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:53:38.821Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:53:38.821Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:53:38.821Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:53:38.821Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T12:53:44.804Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:53:44.807Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T12:53:44.807Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:54:12.341Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T12:56:33.200Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T12:56:33.217Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:56:33.227Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:56:33.228Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:56:33.228Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:56:33.228Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T12:56:33.228Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T12:56:55.001Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:56:55.002Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T12:56:55.003Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T12:59:20.626Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:59:20.627Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T12:59:20.627Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T12:59:25.315Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T12:59:25.325Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T13:00:27.495Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T13:00:27.512Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T13:00:27.523Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T13:00:27.523Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T13:00:27.523Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T13:00:27.524Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T13:00:27.524Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T13:00:47.107Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T13:00:47.108Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T13:00:47.109Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T13:00:50.570Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T13:00:50.579Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T13:01:23.981Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T13:01:23.982Z"}
+{"level":"info","message":"/login: User name <AMC> logged in","timestamp":"2016-11-20T13:01:23.983Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T13:01:27.159Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T13:01:27.169Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T13:02:23.498Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T13:02:23.509Z"}

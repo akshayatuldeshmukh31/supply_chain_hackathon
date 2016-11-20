@@ -8,8 +8,8 @@ var dbFuncs = require('../database/databaseOps');
 var logger = require('../config/logger')
 var secureRouter = express.Router();
 
-var pendingApprovalsCollection = null;
-var stakeholdersCollection = null;
+var exportInfoCollection = null;
+var importInfoCollection = null;
 
 secureRouter.use(function(req, res, next){
 	var token = req.body.token || req.query.token || req.headers['x-access-token'];
@@ -25,7 +25,7 @@ secureRouter.use(function(req, res, next){
             "error": statusCodes.authenticationFailureErrorMessage
           }));  
         } 
-        else if(decoded.role!="admin"){
+        else if(decoded.role!="store"){
         	res.setHeader('Content-Type', 'application/json');
           	res.status(500).send(JSON.stringify({
             	"success": statusCodes.authenticationFailure, 
@@ -50,6 +50,42 @@ secureRouter.use(function(req, res, next){
         "error": statusCodes.authenticationTokenNotProvidedErrorMessage 
       }));
     }
+});
+
+secureRouter.post('/getInfo', function(req, res){
+  exportInfoCollection = initData.returnExportInfoCollection();
+  importInfoCollection = initData.returnImportInfoCollection();
+
+  var jsonQuery = JSON.parse(JSON.stringify({
+    "billOfLading#": req.body['billOfLading#']
+  }));
+
+  dbFuncs.searchAllDetails(exportInfoCollection, jsonQuery, function(code, cursor, message){
+    if(code=="1"){
+      res.send(JSON.stringify({
+        "success": 1,
+        "error": null,
+        "containers": cursor
+      }));
+    }
+    else{
+      dbFuncs.searchAllDetails(importInfoCollection, jsonQuery, function(code, cursor2, message){
+        if(code=="1"){
+          res.send(JSON.stringify({
+            "success": 1,
+            "error": null,
+            "containers": cursor2
+          }));
+        }
+        else{
+          res.send(JSON.stringify({
+            "success": -1,
+            "error": message
+          }));
+        }
+      });
+    }
+  });
 });
 
 module.exports = secureRouter;
