@@ -32,11 +32,12 @@
                <tr ng-repeat="x in imports">
                    <td>{{x.vesselName}}</td>
                    <td>{{x.shippingLine}}</td>
-                   <td>{{x.container#}}</td>
-                   <td>{{x.billOfLading#}}</td>
+                   <td>{{x['container#']}}</td>
+                   <td>{{x['billOfLading#']}}</td>
                    <td>{{x.containerSizeType}}</td>
                    <td>{{x.estimatedVesselArrival}}</td>
                </tr>
+
 
             </table>
         </uib-tab>
@@ -53,8 +54,8 @@
                <tr ng-repeat="x in exports">
                    <td>{{x.vesselName}}</td>
                    <td>{{x.shippingLine}}</td>
-                   <td>{{x.container#}}</td>
-                   <td>{{x.billOfLading#}}</td>
+                   <td>{{x['container#']}}</td>
+                   <td>{{x['billOfLading#']}}</td>
                    <td>{{x.containerSizeType}}</td>
                    <td>{{x.cargoCutoff}}</td>
                </tr>

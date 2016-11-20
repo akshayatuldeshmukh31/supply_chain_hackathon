@@ -10,7 +10,7 @@ var config = require('/home/akshayd31/CPRQ/config');
 // var companyRoutes = require("./company_access");
 // var drayageRoutes = require("./drayage_access");
 // var shippingRoutes = require("./shippingRoutes");
-// var portMtoRoutes = require("./portMtoRoutes");
+var portMtoRoutes = require("./portMtoRoutes");
 var portAdminRoutes = require("./portAdminRoutes");
 // var portLaborRoutes = require("./portLaborRoutes");
 
@@ -32,7 +32,7 @@ function loadAppRoutes(app){
 	// app.use("/drayage", drayageRoutes);
 
 	// app.use("/shippingline", shippingRoutes);
-	// app.use("/portmto", portMtoRoutes);
+	app.use("/portmto", portMtoRoutes);
 	app.use("/portadmin", portAdminRoutes);
 	// app.use("/portlabor", portLaborRoutes);
 
