@@ -13,9 +13,9 @@ angular.module('portApp')
                 email: $scope.email,
                 company: $scope.companyName
             }).then(function(response) {
-                alert('YAY!');
+
             }, function(response) {
-                 alert('NAY!');
+
             });
         };
     }

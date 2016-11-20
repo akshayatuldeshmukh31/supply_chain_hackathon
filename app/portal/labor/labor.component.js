@@ -12,7 +12,7 @@ angular.module('portApp')
             $scope.tasks = response.data.containers;
 
         }, function(response) {
-            console.error('F!');
+
         });
     }
 });

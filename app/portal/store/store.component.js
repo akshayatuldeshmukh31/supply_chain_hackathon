@@ -6,7 +6,7 @@ angular.module('portApp')
     controller: function($scope, $http, authService) {
         $scope.searched = false;
         $scope.getDetails = function(){
-            alert("Byahtch");
+
             $http.post("http://localhost:3000/store/getInfo", {
                 'billOfLading#': $scope.ladingno,
                 token: authService.getToken()
@@ -14,14 +14,11 @@ angular.module('portApp')
                 $scope.details = response.data.containers;
                 $scope.searched = true;
             }, function(response) {
-                 alert('NAY!');
+
             });
 
         }
 
 
-    },
-    bindings: {
-        makeAppointment: '<'
     }
 });
