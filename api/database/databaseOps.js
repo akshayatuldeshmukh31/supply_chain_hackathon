@@ -31,6 +31,23 @@ function searchDetails(collectionName, jsonQuery, callback){
 	})
 }
 
+function searchAllDetails(collectionName, jsonQuery, callback){
+	collectionName.find(jsonQuery).toArray(function (err, result) {
+    	if(err){
+			logger.info(collectionName + ": Search op unsuccessful for " + jsonQuery);
+			callback(statusCodes.opError, result, err);
+		} 
+		else if(err==null && result.length==0){
+			logger.warn(collectionName + ": " + jsonQuery + " does not exist");
+			callback(statusCodes.opNotFound, result, statusCodes.notFoundMessage);		
+		} 
+		else if(err==null && result.length){
+			logger.info(collectionName + ": Search op successful for " + jsonQuery);
+			callback(statusCodes.opSuccess, result, statusCodes.successMessage);
+		}
+    });
+}
+
 function updateDetails(collectionName, jsonQuery, jsonEntry, callback){
 	collectionName.updateOne(jsonQuery,  {$set:jsonEntry}, {w:1}, function(err,object){
 		var result = JSON.parse(object);
@@ -72,3 +89,4 @@ exports.insertDetails = insertDetails;
 exports.searchDetails = searchDetails;
 exports.updateDetails = updateDetails;
 exports.deleteDetails = deleteDetails;
+exports.searchAllDetails = searchAllDetails;

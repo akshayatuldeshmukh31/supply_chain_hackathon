@@ -11,7 +11,7 @@ var config = require('/home/akshayd31/CPRQ/config');
 // var drayageRoutes = require("./drayage_access");
 // var shippingRoutes = require("./shippingRoutes");
 // var portMtoRoutes = require("./portMtoRoutes");
-// var portAdminRoutes = require("./portAdminRoutes");
+var portAdminRoutes = require("./portAdminRoutes");
 // var portLaborRoutes = require("./portLaborRoutes");
 
 var stakeholdersCollection = null;
@@ -33,7 +33,7 @@ function loadAppRoutes(app){
 
 	// app.use("/shippingline", shippingRoutes);
 	// app.use("/portmto", portMtoRoutes);
-	// app.use("/portadmin", portAdminRoutes);
+	app.use("/portadmin", portAdminRoutes);
 	// app.use("/portlabor", portLaborRoutes);
 
 	//TEST route for checking successful deployment
@@ -49,7 +49,7 @@ function loadAppRoutes(app){
 
 		if(req.body.userName==""||req.body.password==""||req.body.role==""||req.body.pointOfContact==""||req.body.email==""){
 			res.send(JSON.stringify({
-				"success": -1,
+				"success": 0,
 				"error": statusCodes.emptyReqBodyMessage
 			}));
 		}
@@ -91,7 +91,7 @@ function loadAppRoutes(app){
 					else if(code=="1"){
 						logger.error("/register: User name <" + req.body.userName + "> not registered");
 						res.send(JSON.stringify({
-							"success": -1,
+							"success": 0,
 							"error": "User name already exists!"
 						}));
 					}
@@ -125,7 +125,7 @@ function loadAppRoutes(app){
 
 		if(req.body.userName==""||req.body.password==""){
 			res.send(JSON.stringify({
-				"success": -1,
+				"success": 0,
 				"error": statusCodes.emptyReqBodyMessage
 			}))
 		}
@@ -158,10 +158,11 @@ function loadAppRoutes(app){
 						var token = jwt.sign(item, config.secret, {
 							expiresIn: 86400
 						});
-						res.setHeader("x-access-token", token);
 						res.send(JSON.stringify({
 							"success": 1,
-							"error": null
+							"error": null,
+							"token": token,
+							"role": item.role
 						}));
 					}
 					else if(code=="0"){
