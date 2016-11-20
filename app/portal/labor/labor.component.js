@@ -9,10 +9,8 @@ angular.module('portApp')
         this.makeAppointment = true;
         this.detailsWidth = this.makeAppointment ? 'col-xs-6': 'col-xs-12';
         $http.get("congressCall.php?choice=1&subchoice=1")
-    .then(function(response) {
-        $scope.tasks = response.data;
-    },
-    bindings: {
-        makeAppointment: '<'
+        .then(function(response) {
+            $scope.tasks = response.data;
+        })
     }
 });
