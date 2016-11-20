@@ -15,6 +15,7 @@ var exportInfoCollection = null;
 var importInfoCollection = null;
 var drayageRegistryCollection = null;
 var stakeholdersCollection = null;
+var pendingApprovalsCollection = null;
 
 //Function to start Express server
 function startExpressServer(){
@@ -68,13 +69,23 @@ function startMongoServer(){
 
 			//stakeholdersCollection Collection
 			stakeholdersCollection = db.collection(environmentVariables.stakeholdersCollection);
-			stakeholdersCollection.ensureIndex({"_id":1, unique:true}, function(err,results){
+			stakeholdersCollection.ensureIndex({"userName":1, unique:true}, function(err,results){
 				if(err)
-					logger.error("StakeholdersCollection Collection - Error in ensuring index for id: "+err);
+					logger.error("Stakeholders Collection - Error in ensuring index for id: "+err);
 				else if(results){
-					logger.info("StakeholdersCollection Collection - Index creation is successful for id!");
+					logger.info("Stakeholders Collection - Index creation is successful for id!");
 				}
-			});			
+			});
+
+			//pendingApprovals Collection
+			pendingApprovalsCollection = db.collection(environmentVariables.pendingApprovalsCollection);
+			pendingApprovalsCollection.ensureIndex({"userName":1, unique:true}, function(err,results){
+				if(err)
+					logger.error("PendingApprovals Collection - Error in ensuring index for id: "+err);
+				else if(results){
+					logger.info("PendingApprovals Collection - Index creation is successful for id!");
+				}
+			});				
 		}
 	});
 }
@@ -95,6 +106,10 @@ function returnStakeholdersCollection(){
 	return stakeholdersCollection;
 }
 
+function returnPendingApprovalsCollection(){
+	return pendingApprovalsCollection;
+}
+
 //Exporting functions for access from main.js
 exports.startExpressServer = startExpressServer;
 exports.startMongoServer = startMongoServer;
@@ -104,3 +119,4 @@ exports.returnExportInfoCollection = returnExportInfoCollection;
 exports.returnImportInfoCollection = returnImportInfoCollection;
 exports.returnDrayageRegistryCollection = returnDrayageRegistryCollection;
 exports.returnStakeholdersCollection = returnStakeholdersCollection;
+exports.returnPendingApprovalsCollection = returnPendingApprovalsCollection;

@@ -12,3 +12,5 @@ exports.opError = "-1";							//Error on Mongo's side (applies to files)
 exports.opNotFound = "0";								//No error but the details do not exist
 exports.notFoundMessage = "Data not found!";
 exports.opSuccess = "1";							//Operation was executed smoothly
+
+exports.emptyReqBodyMessage = "Empty request body!"

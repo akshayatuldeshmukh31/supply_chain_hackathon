@@ -18,11 +18,11 @@ function searchDetails(collectionName, jsonQuery, callback){
 	collectionName.findOne(jsonQuery, function(err, item){
 		if(err){
 			logger.info(collectionName + ": Search op unsuccessful for " + jsonQuery);
-			callback(statusCodes.opError, err);
+			callback(statusCodes.opError, item, err);
 		}
 		else if(err==null && item==null){
 			logger.warn(collectionName + ": " + jsonQuery + " does not exist");
-			callback(statusCodes.opNotFound, statusCodes.notFoundMessage);		
+			callback(statusCodes.opNotFound, item, statusCodes.notFoundMessage);		
 		}
 		else if(err==null && item!=null){
 			logger.info(collectionName + ": Search op successful for " + jsonQuery);
