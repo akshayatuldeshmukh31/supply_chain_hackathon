@@ -9,6 +9,7 @@ var logger = require('../config/logger')
 var secureRouter = express.Router();
 
 var pendingApprovalsCollection = null;
+var stakeholdersCollection = null;
 
 secureRouter.use(function(req, res, next){
 	var token = req.body.token || req.query.token || req.headers['x-access-token'];
@@ -24,10 +25,17 @@ secureRouter.use(function(req, res, next){
             "error": statusCodes.authenticationFailureErrorMessage
           }));  
         } 
-        else {
-          // if everything is good, save to request for use in other routes
-          req.decoded = decoded; 
-          next();
+        else if(decoded.role!="admin"){
+        	res.setHeader('Content-Type', 'application/json');
+          	res.status(500).send(JSON.stringify({
+            	"success": statusCodes.authenticationFailure, 
+            	"error": statusCodes.authenticationFailureErrorMessage
+          	}));
+        }
+        else{
+        	// if everything is good, save to request for use in other routes
+          	req.decoded = decoded; 
+          	next();
         }
       });
 
@@ -71,6 +79,53 @@ secureRouter.post("/pendingApprovals", function(req, res){
 			res.send(JSON.stringify({
 				"pendingApprovals": cursor,
 				"success": 1,
+				"error": null
+			}));
+		}
+	});
+});
+
+secureRouter.post("/approvals", function(req, res){
+	pendingApprovalsCollection = initData.returnPendingApprovalsCollection();
+	stakeholdersCollection = initData.returnStakeholdersCollection();
+
+	var jsonQuery = JSON.parse(JSON.stringify({
+		"userName": req.body.userName
+	}));
+
+	dbFuncs.searchDetails(pendingApprovalsCollection, jsonQuery, function(code, item, message){
+		if(code=="1"){
+			var jsonInsert = JSON.parse(JSON.stringify({
+				"userName": item.userName,
+				"password": item.password,
+				"pointOfContact": item.pointOfContact,
+				"isApproved": "Cleared",
+				"email": item.email,
+				"role": item.role
+			}));
+
+			dbFuncs.insertDetails(stakeholdersCollection, jsonInsert, function(code, message){
+				if(code=="1"){
+					dbFuncs.deleteDetails(pendingApprovalsCollection, jsonQuery, function(code, message){
+						if(code=="1"){
+							res.send(JSON.stringify({
+								"success": 1,
+								"error": null
+							}));
+						}
+					});
+				}
+				else{
+					res.send(JSON.stringify({
+						"success": -1,
+						"error": null
+					}));
+				}
+			});
+		}
+		else{
+			res.send(JSON.stringify({
+				"success": -1,
 				"error": null
 			}));
 		}

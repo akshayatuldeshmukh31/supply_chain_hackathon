@@ -32,7 +32,7 @@ function searchDetails(collectionName, jsonQuery, callback){
 }
 
 function searchAllDetails(collectionName, jsonQuery, callback){
-	collectionName.find(jsonQuery).toArray(function (err, result) {
+	collectionName.find(jsonQuery, {"limit": 20}).toArray(function (err, result) {
     	if(err){
 			logger.info(collectionName + ": Search op unsuccessful for " + jsonQuery);
 			callback(statusCodes.opError, result, err);
@@ -46,6 +46,24 @@ function searchAllDetails(collectionName, jsonQuery, callback){
 			callback(statusCodes.opSuccess, result, statusCodes.successMessage);
 		}
     });
+}
+
+function updateAllDetails(collectionName, jsonQuery, jsonEntry, callback){
+	collectionName.updateMany(jsonQuery,  {$set:jsonEntry}, {w:1}, function(err,object){
+		var result = JSON.parse(object);
+		if(err){
+			logger.error(collectionName + ": Update op unsuccessful for " + jsonQuery + " and " + jsonEntry);
+			callback(statusCodes.opError, err);
+		}
+		else if(result.n==0){
+			logger.warn(collectionName + ": " + jsonQuery + " does not exist");
+			callback(statusCodes.opNotFound, statusCodes.notFoundMessage);	
+		}
+		else{
+			logger.info(collectionName + ": Update op successful for " + jsonQuery + " and " + jsonEntry);
+			callback(statusCodes.opSuccess, statusCodes.successMessage);
+		}
+	});
 }
 
 function updateDetails(collectionName, jsonQuery, jsonEntry, callback){
@@ -88,5 +106,6 @@ function deleteDetails(collectionName, jsonRemove, callback){
 exports.insertDetails = insertDetails;
 exports.searchDetails = searchDetails;
 exports.updateDetails = updateDetails;
+exports.updateAllDetails = updateAllDetails;
 exports.deleteDetails = deleteDetails;
 exports.searchAllDetails = searchAllDetails;
