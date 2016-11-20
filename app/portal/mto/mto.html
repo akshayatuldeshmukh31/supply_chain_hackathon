@@ -9,6 +9,10 @@
                     <label for="vessel">Vessel Name</label>
                     <input type="text"  class="form-control" name="arrived" placeholder="Vessel Name" ng-model="shipArrived">
                 </div>
+                <div class="form-group">
+                    <label for="terminal">Arriving Terminal</label>
+                    <input type="text"  class="form-control" name="arrived" placeholder="Arriving Terminal" ng-model="shipTerminal">
+                </div>
                 <button class="btn btn-primary" ng-click="hasArrived(shipArrived)" align="center">Submit</button>
             </form>
         </uib-tab>
@@ -26,12 +30,12 @@
                    <th>Estimated Arrival</th>
                </tr>
                <tr ng-repeat="x in ">
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
+                   <td>{{x.vesselName}}</td>
+                   <td>{{x.shippingLine}}</td>
+                   <td>{{x.container#}}</td>
+                   <td>{{x.billOfLading#}}</td>
+                   <td>{{x.containerSizeType}}</td>
+                   <td>{{x.estimatedVesselArrival}}</td>
                </tr>
 
             </table>
@@ -44,15 +48,15 @@
                    <th>Container #</th>
                    <th>Bill of Lading #</th>
                    <th>Container Size Type</th>
-                   <th>Estimated Arrival</th>
+                   <th>Cargo Cutoff</th>
                </tr>
-               <tr ng-repeat="x in ">
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
-                   <td>{{x.}}</td>
+               <tr ng-repeat="x in exports">
+                   <td>{{x.vesselName}}</td>
+                   <td>{{x.shippingLine}}</td>
+                   <td>{{x.container#}}</td>
+                   <td>{{x.billOfLading#}}</td>
+                   <td>{{x.containerSizeType}}</td>
+                   <td>{{x.cargoCutoff}}</td>
                </tr>
 
             </table>

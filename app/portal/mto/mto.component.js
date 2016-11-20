@@ -10,7 +10,13 @@ angular.module('portApp')
         this.detailsWidth = this.makeAppointment ? 'col-xs-6': 'col-xs-12';
 
         $http.post('http://localhost:3000/portadmin/pendingApprovals', {token: authService.getToken()}).then(function(response) {
-            $scope.terminal = response.data;
+            $scope.exports = response.data;
+        }, function(response) {
+            console.error('F!');
+        });
+
+        $http.post('http://localhost:3000/portadmin/pendingApprovals', {token: authService.getToken()}).then(function(response) {
+            $scope.imports = response.data;
         }, function(response) {
             console.error('F!');
         });
