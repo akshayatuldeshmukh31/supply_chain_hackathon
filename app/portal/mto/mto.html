@@ -4,16 +4,58 @@
             <table class="table"></table>
         </uib-tab>
         <uib-tab index="2" heading="Post Arrival Import">
-            2
+            <form name="arrived">
+                <div class="form-group">
+                    <label for="vessel">Vessel Name</label>
+                    <input type="text" ng-model="arrived" class="form-control" name="arrived" placeholder="Vessel Name">
+                </div>
+                <button class="btn btn-primary" ng-click="hasArrived(arrived)" align="center">Submit</button>
+            </form>
         </uib-tab>
         <uib-tab index="3" heading="Post Arrival Export">
             2
         </uib-tab>
         <uib-tab index="4" heading="View Imports">
-            2
+            <table class="table">
+               <tr>
+                   <th>Vessel Name</th>
+                   <th>Shipping Line</th>
+                   <th>Container #</th>
+                   <th>Bill of Lading #</th>
+                   <th>Container Size Type</th>
+                   <th>Estimated Arrival</th>
+               </tr>
+               <tr ng-repeat="x in ">
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+               </tr>
+
+            </table>
         </uib-tab>
         <uib-tab index="5" heading="View Exports">
-            2
+            <table class="table">
+               <tr>
+                   <th>Vessel Name</th>
+                   <th>Shipping Line</th>
+                   <th>Container #</th>
+                   <th>Bill of Lading #</th>
+                   <th>Container Size Type</th>
+                   <th>Estimated Arrival</th>
+               </tr>
+               <tr ng-repeat="x in ">
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+                   <td>{{x.}}</td>
+               </tr>
+
+            </table>
         </uib-tab>
         <uib-tab index="6" heading="Clear Customs">
             2

@@ -9,6 +9,12 @@ angular.module('portApp')
         this.makeAppointment = true;
         this.detailsWidth = this.makeAppointment ? 'col-xs-6': 'col-xs-12';
 
+        $http.post('http://localhost:3000/portadmin/pendingApprovals', {token: authService.getToken()}).then(function(response) {
+            $scope.terminal = response.data;
+        }, function(response) {
+            console.error('F!');
+        });
+
     },
     bindings: {
         makeAppointment: '<'
