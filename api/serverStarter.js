@@ -80,12 +80,28 @@ function startMongoServer(){
 	});
 }
 
+function returnExportInfoCollection(){
+	return exportInfoCollection;
+}
+
+function returnImportInfoCollection(){
+	return importInfoCollection;
+}
+
+function returnDrayageRegistryCollection(){
+	return drayageRegistryCollection;
+}
+
+function returnStakeholdersCollection(){
+	return stakeholdersCollection;
+}
+
 //Exporting functions for access from main.js
 exports.startExpressServer = startExpressServer;
 exports.startMongoServer = startMongoServer;
 
 //Exporting functions relevant to MongoDB
-exports.exportInfoCollection = exportInfoCollection;
-exports.importInfoCollection = importInfoCollection;
-exports.drayageRegistryCollection = drayageRegistryCollection;
-exports.stakeholdersCollection = stakeholdersCollection;
+exports.returnExportInfoCollection = returnExportInfoCollection;
+exports.returnImportInfoCollection = returnImportInfoCollection;
+exports.returnDrayageRegistryCollection = returnDrayageRegistryCollection;
+exports.returnStakeholdersCollection = returnStakeholdersCollection;
