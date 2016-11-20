@@ -22,6 +22,19 @@
     justify-content: center;
 }
 
-drayage > .jumbotron {
+.jumbotron {
+    padding: 30px;
+    border-radius: 7px;
+}
+
+drayage, register, distributor, store, labor {
+    display:block;
+}
+
+drayage .jumbotron, register .jumbotron, distributor .jumbotron, store .jumbotron, labor .jumbotron {
     width: 80%;
+}
+
+register .jumbotron {
+    width: 70%;
 }

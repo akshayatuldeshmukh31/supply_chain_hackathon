@@ -1,8 +1,8 @@
 var angular = require('angular');
 
 angular.module('portApp')
-.component('drayage', {
-    templateUrl: 'app/home/drayage/drayage.html',
+.component('store', {
+    templateUrl: 'app/portal/store/store.html',
     controller: function() {
         this.container = undefined;
         this.searched = true;
