@@ -3,7 +3,7 @@ var angular = require('angular');
 angular.module('portApp')
 .component('labor', {
     templateUrl: 'app/portal/labor/labor.html',
-    controller: function() {
+    controller: function($http, authService) {
         this.container = undefined;
         this.searched = true;
         this.makeAppointment = true;

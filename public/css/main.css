@@ -23,8 +23,22 @@
 }
 
 .jumbotron {
-    padding: 30px;
+    padding: 15px 30px !important;
     border-radius: 7px;
+}
+
+.row {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+.jumbotron > * {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.panel {
+    margin-bottom: 0 !important;
 }
 
 drayage, register, distributor, store, labor {

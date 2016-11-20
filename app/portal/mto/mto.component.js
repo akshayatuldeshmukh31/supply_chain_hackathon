@@ -3,7 +3,7 @@ var angular = require('angular');
 angular.module('portApp')
 .component('mto', {
     templateUrl: 'app/portal/mto/mto.html',
-    controller: function($http, $scope) {
+    controller: function($http, $scope, authService) {
         this.container = undefined;
         this.searched = true;
         this.makeAppointment = true;
