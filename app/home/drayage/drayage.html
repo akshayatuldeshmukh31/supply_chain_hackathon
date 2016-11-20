@@ -2,23 +2,29 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Container ID">
+                <input type="text" class="form-control" placeholder="Container ID" ng-model="containerid">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
+                    <button class="btn btn-default" type="button" ng-click="search()">Search</button>
                 </span>
             </div>
         </div>
     </div>
-    <div class="row" ng-show="$ctrl.searched">
-        <div ng-class="$ctrl.detailsWidth">
+    <div class="row" ng-show="searched">
+        <div ng-class="detailsWidth">
             <div class="panel panel-default">
                 <div class="panel-heading">CONTAINER DETAILS</div>
                 <div class="panel-body">
-                    Panel content
+                    <div ng-if="toggle">
+                        Hello
+                    </div>
+                    <div ng-if="!toggle">
+                        Hye
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="col-xs-6" ng-if="$ctrl.makeAppointment">
+        <div class="col-xs-6" ng-if="makeAppointment">
             <div class="panel panel-default">
                 <div class="panel-heading">MAKE APPOINTMENT</div>
                 <div class="panel-body">
