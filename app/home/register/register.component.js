@@ -10,7 +10,8 @@ angular.module('portApp')
                 password: $scope.password,
                 role: $scope.role,
                 pointOfContact: $scope.fullName,
-                email: $scope.email
+                email: $scope.email,
+                companyName: $scope.companyName
             }).then(function(response) {
                 alert('YAY!');
             }, function(response) {
