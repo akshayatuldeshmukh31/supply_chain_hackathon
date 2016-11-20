@@ -40,15 +40,19 @@ app.config(['$stateProvider', '$urlRouterProvider',
             url: '/home',
             templateUrl: 'app/home/home.html',
             controller: function($http, $scope, $state, authService) {
-                $scope.login = $http.post('', {
-                    userName: $scope.username,
-                    password: $scope.password
-                }).then(function(response) {
-                    authService.setToken(response.token);
-                    $state.go('portal.' + response.role);
-                }).then(function(response) {
-                    
-                });
+
+                $scope.loginf = function(){
+                    $http.post('http://localhost:3000/login', {
+                        userName: $scope.username,
+                        password: $scope.password
+                    }).then(function(response) {
+                        console.log(response);
+                        authService.setToken(response.data.token);
+                        $state.transitionTo('portal.' + response.data.role);
+                    }, function(response) {
+                        alert("NOOOO");
+                    });
+                };
             }
         });
         

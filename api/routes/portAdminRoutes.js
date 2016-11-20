@@ -44,7 +44,7 @@ secureRouter.use(function(req, res, next){
     }
 });
 
-secureRouter.get("/pendingApprovals", function(req, res){
+secureRouter.post("/pendingApprovals", function(req, res){
 	pendingApprovalsCollection = initData.returnPendingApprovalsCollection();
 
 	var jsonQuery = JSON.parse(JSON.stringify({
