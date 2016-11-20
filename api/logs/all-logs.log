@@ -40,3 +40,9 @@
 {"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.599Z"}
 {"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.599Z"}
 {"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-19T23:30:08.599Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T00:29:56.179Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T00:29:56.196Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T00:29:56.210Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T00:29:56.211Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T00:29:56.211Z"}
+{"level":"info","message":"StakeholdersCollection Collection - Index creation is successful for id!","timestamp":"2016-11-20T00:29:56.211Z"}
