@@ -12,6 +12,25 @@ require('./portal/store/store.component.js');
 require('./portal/distributor/distributor.component.js');
 require('./portal/labor/labor.component.js');
 require('./portal/shipper/shipper.component.js');
+require('./portal/admin/admin.component.js');
+require('./portal/mto/mto.component.js');
+
+app.factory('authService', function() {
+    var token = undefined;
+    
+    function getToken() {
+        return token;
+    } 
+    
+    function setToken(newToken) {
+        token = newToken;
+    }
+        
+    return {
+        getToken: getToken,
+        setToken: setToken
+    }
+});
 
 app.config(['$stateProvider', '$urlRouterProvider', 
     function($stateProvider, $urlRouterProvider) {
@@ -19,7 +38,18 @@ app.config(['$stateProvider', '$urlRouterProvider',
         
         $stateProvider.state('home', {
             url: '/home',
-            templateUrl: 'app/home/home.html'
+            templateUrl: 'app/home/home.html',
+            controller: function($http, $scope, $state, authService) {
+                $scope.login = $http.post('', {
+                    userName: $scope.username,
+                    password: $scope.password
+                }).then(function(response) {
+                    authService.setToken(response.token);
+                    $state.go('portal.' + response.role);
+                }).then(function(response) {
+                    
+                });
+            }
         });
         
         $stateProvider.state('home.drayage', {
@@ -55,6 +85,16 @@ app.config(['$stateProvider', '$urlRouterProvider',
         $stateProvider.state('portal.shipper', {
             url: '/shipper',
             template: '<shipper class="center-content"></shipper>'
+        });
+        
+        $stateProvider.state('portal.admin', {
+            url: '/admin',
+            template: '<admin class="center-content"></admin>'
+        });
+        
+        $stateProvider.state('portal.mto', {
+            url: '/mto',
+            template: '<mto class="center-content"></mto>'
         });
     }
 ]);
