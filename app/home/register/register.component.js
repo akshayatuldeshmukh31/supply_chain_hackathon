@@ -5,7 +5,7 @@ angular.module('portApp')
     templateUrl: 'app/home/register/register.html',
     controller: function($http, $scope) {
         $scope.registerUser = function() {
-             $http.post("localhost:3000/register", {
+             $http.post("http://localhost:3000/register", {
                 userName: $scope.username,
                 password: $scope.password,
                 role: $scope.role,

@@ -19,7 +19,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
         
         $stateProvider.state('home', {
             url: '/home',
-            templateUrl: 'app/home/home.html',
+            templateUrl: 'app/home/home.html'
         });
         
         $stateProvider.state('home.drayage', {

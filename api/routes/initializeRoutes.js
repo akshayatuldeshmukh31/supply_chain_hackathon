@@ -4,7 +4,7 @@ var jwt = require("jsonwebtoken")
 var initData = require('../serverStarter')
 var dbFuncs = require('../database/databaseOps');
 var logger = require('../config/logger')
-
+var express = require('express');
 // var companyRoutes = require("./company_access");
 // var drayageRoutes = require("./drayage_access");
 // var shippingRoutes = require("./shippingRoutes");
@@ -18,7 +18,10 @@ var stakeholdersCollection = null;
 function loadAppRoutes(app){
 	//To support JSON-encoded bodies
 	app.use(bodyParser.json());
-
+	// app.use(express.static(path.join(__dirname, '../../public')));
+	// app.use(express.static(path.join(__dirname, '../../node_modules')));
+	// app.use(express.static(path.join(__dirname, '../../app')));
+	app.use(express.static(path.join(__dirname, '../../')));
 	//To support URL-encoded bodies
 	app.use(bodyParser.urlencoded({extended:false}));
 

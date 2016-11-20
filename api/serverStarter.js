@@ -24,7 +24,6 @@ function startExpressServer(){
 
 		logger.info("Express Server - Server is operational: " + host + " " + port);
 	});
-
 	//Function call to load routes
 	routeLoader.loadAppRoutes(app);
 }
