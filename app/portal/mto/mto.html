@@ -16,8 +16,28 @@
                 <button class="btn btn-primary" ng-click="hasArrived(shipArrived)" align="center">Submit</button>
             </form>
         </uib-tab>
-        <uib-tab index="3" heading="Post Arrival Export">
-            2
+        <uib-tab index="3" heading="Post Arrival Import Data Entry">
+            <table class="table">
+               <tr>
+                   <th>Vessel Name</th>
+                   <th>Shipping Line</th>
+                   <th>Container #</th>
+                   <th>Lot Number</th>
+                   <th>Berth Number</th>
+                   <th>Last Day for Pick up</th>
+               </tr>
+               <tr ng-repeat="x in fillData">
+                   <td>{{x.vesselName}}</td>
+                   <td>{{x.shippingLine}}</td>
+                   <td>{{x['container#']}}</td>
+                   <td><input type="text" class="form-control" ng-model="x.lotno"></td>
+                   <td><input type="text" class="form-control" ng-model="x.berthno"></td>
+                   <td><input type="text" class="form-control" ng-model="x.lastdayfor"></td>
+                   <td><button class="btn btn-primary" ng-click="updateData(x)" align="center">Submit</button></td>
+               </tr>
+
+
+            </table>
         </uib-tab>
         <uib-tab index="4" heading="View Imports">
             <table class="table">

@@ -17,6 +17,28 @@ angular.module('portApp')
             console.error('F!');
         });
 
+        $http.post('http://localhost:3000/portmto/newArrivals', {token: authService.getToken()}).then(function(response) {
+            $scope.fillData = response.data;
+
+        }, function(response) {
+            console.error('F!');
+        });
+
+        $scope.updateData = function(row){
+            $http.post('http://localhost:3000/portmto/updateLocationImp', {
+                "container#" : row['container#'],
+                "lotNumber" : row.lotno,
+                "berthNumber" : row.berthno,
+                "lastDayForPickup" : row.lastdayfor,
+                token: authService.getToken()
+            }).then(function(response) {
+
+                console.log("Works");
+            }, function(response) {
+                console.error('F!');
+            });
+        }
+
         $scope.hasArrived = function(){
          $http.post("http://localhost:3000/portmto/postArrivals", {
                 vesselName: $scope.shipArrived,
