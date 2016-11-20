@@ -810,3 +810,10 @@
 {"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T14:56:53.243Z"}
 {"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T15:03:32.282Z"}
 {"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T15:04:49.325Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T15:29:03.410Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T15:29:03.427Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.438Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
