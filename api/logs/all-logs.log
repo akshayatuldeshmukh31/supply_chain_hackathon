@@ -817,3 +817,82 @@
 {"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
 {"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
 {"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T15:29:03.439Z"}
+{"date":"Sun Nov 20 2016 08:34:28 GMT-0800 (PST)","process":{"pid":17433,"uid":1000,"gid":1000,"cwd":"/home/akshayd31/CPRQ/Hackathon/jam_sc","execPath":"/usr/bin/nodejs","version":"v6.9.1","argv":["/usr/bin/nodejs","/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js"],"memoryUsage":{"rss":45789184,"heapTotal":33591296,"heapUsed":18313816}},"os":{"loadavg":[0.3330078125,0.36279296875,0.27490234375],"uptime":71856},"trace":[{"column":11,"file":"util.js","function":"Object.exports._errnoException","line":1026,"method":"exports._errnoException","native":false},{"column":20,"file":"util.js","function":"exports._exceptionWithHostPort","line":1049,"method":"_exceptionWithHostPort","native":false},{"column":14,"file":"net.js","function":"Server._listen2","line":1257,"method":"_listen2","native":false},{"column":10,"file":"net.js","function":"listen","line":1293,"method":null,"native":false},{"column":5,"file":"net.js","function":"Server.listen","line":1389,"method":"listen","native":false},{"column":24,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/node_modules/express/lib/application.js","function":"EventEmitter.listen","line":617,"method":"listen","native":false},{"column":15,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/api/serverStarter.js","function":"Object.startExpressServer","line":22,"method":"startExpressServer","native":false},{"column":15,"file":"/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js","function":"","line":3,"method":null,"native":false},{"column":32,"file":"module.js","function":"Module._compile","line":570,"method":"_compile","native":false},{"column":10,"file":"module.js","function":"Object.Module._extensions..js","line":579,"method":"Module._extensions..js","native":false}],"stack":["Error: listen EADDRINUSE :::3000","    at Object.exports._errnoException (util.js:1026:11)","    at exports._exceptionWithHostPort (util.js:1049:20)","    at Server._listen2 (net.js:1257:14)","    at listen (net.js:1293:10)","    at Server.listen (net.js:1389:5)","    at EventEmitter.listen (/home/akshayd31/CPRQ/Hackathon/jam_sc/node_modules/express/lib/application.js:617:24)","    at Object.startExpressServer (/home/akshayd31/CPRQ/Hackathon/jam_sc/api/serverStarter.js:22:15)","    at Object.<anonymous> (/home/akshayd31/CPRQ/Hackathon/jam_sc/startup.js:3:15)","    at Module._compile (module.js:570:32)","    at Object.Module._extensions..js (module.js:579:10)"],"level":"error","message":"uncaughtException: listen EADDRINUSE :::3000","timestamp":"2016-11-20T16:34:28.592Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T16:34:28.612Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:34:28.623Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:34:28.624Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:34:28.624Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:34:28.624Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:34:28.624Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T16:35:08.204Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T16:35:08.220Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:35:08.231Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:35:08.231Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:35:08.231Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:35:08.231Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:35:08.231Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:41:26.835Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:41:26.836Z"}
+{"level":"info","message":"[object Object]: Insert op successful for [object Object]","timestamp":"2016-11-20T16:41:26.841Z"}
+{"level":"info","message":"/register: User name <pacific_shipper> registered successfully","timestamp":"2016-11-20T16:41:26.842Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:42:35.901Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:42:35.902Z"}
+{"level":"info","message":"[object Object]: Insert op successful for [object Object]","timestamp":"2016-11-20T16:42:35.903Z"}
+{"level":"info","message":"/register: User name <walmart> registered successfully","timestamp":"2016-11-20T16:42:35.904Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:43:29.973Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:43:29.974Z"}
+{"level":"info","message":"[object Object]: Insert op successful for [object Object]","timestamp":"2016-11-20T16:43:29.975Z"}
+{"level":"info","message":"/register: User name <kohl> registered successfully","timestamp":"2016-11-20T16:43:29.975Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:39.615Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:52.002Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:52.679Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:52.911Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:53.477Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:54.004Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:54.206Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:43:59.749Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:44:24.464Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:44:24.464Z"}
+{"level":"info","message":"/login: User name <admin> logged in","timestamp":"2016-11-20T16:44:24.465Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:44:24.610Z"}
+{"level":"info","message":"/pendingApprovals: Pending approvals retrieved ","timestamp":"2016-11-20T16:44:24.610Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:44:35.611Z"}
+{"level":"info","message":"[object Object]: Insert op successful for [object Object]","timestamp":"2016-11-20T16:44:35.614Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:44:52.250Z"}
+{"level":"info","message":"[object Object]: Insert op successful for [object Object]","timestamp":"2016-11-20T16:44:52.251Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:45:02.805Z"}
+{"level":"info","message":"[object Object]: Insert op successful for [object Object]","timestamp":"2016-11-20T16:45:02.806Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:45:14.032Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:45:14.032Z"}
+{"level":"info","message":"/login: User name <walmart> logged in","timestamp":"2016-11-20T16:45:14.033Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:46:13.906Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:46:13.921Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:48:49.506Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:48:49.516Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:49:05.344Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:49:05.345Z"}
+{"level":"info","message":"/login: User name <mto> logged in","timestamp":"2016-11-20T16:49:05.345Z"}
+{"level":"info","message":"[object Object]: Search op successful for null","timestamp":"2016-11-20T16:49:05.427Z"}
+{"level":"info","message":"/viewData: Retrieved list of exports","timestamp":"2016-11-20T16:49:05.428Z"}
+{"level":"info","message":"[object Object]: Search op successful for null","timestamp":"2016-11-20T16:49:05.430Z"}
+{"level":"info","message":"/viewData: Retrieved list of imports","timestamp":"2016-11-20T16:49:05.430Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:49:05.455Z"}
+{"level":"info","message":"[object Object]: Update op successful for [object Object] and [object Object]","timestamp":"2016-11-20T16:50:09.411Z"}
+{"level":"info","message":"Express Server - Server is operational: :: 3000","timestamp":"2016-11-20T16:51:51.081Z"}
+{"level":"info","message":"MongoDb Server - Successfully connected to database!","timestamp":"2016-11-20T16:51:51.098Z"}
+{"level":"info","message":"ExportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:51:51.108Z"}
+{"level":"info","message":"ImportInfo Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:51:51.109Z"}
+{"level":"info","message":"DrayageRegistry Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:51:51.109Z"}
+{"level":"info","message":"Stakeholders Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:51:51.109Z"}
+{"level":"info","message":"PendingApprovals Collection - Index creation is successful for id!","timestamp":"2016-11-20T16:51:51.109Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:55:33.556Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:55:33.558Z"}
+{"level":"warn","message":"[object Object]: [object Object] does not exist","timestamp":"2016-11-20T16:56:14.210Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:56:14.211Z"}
+{"level":"info","message":"/login: User name <mto> logged in","timestamp":"2016-11-20T16:56:14.211Z"}
+{"level":"info","message":"[object Object]: Search op successful for null","timestamp":"2016-11-20T16:56:14.255Z"}
+{"level":"info","message":"/viewData: Retrieved list of exports","timestamp":"2016-11-20T16:56:14.255Z"}
+{"level":"info","message":"[object Object]: Search op successful for [object Object]","timestamp":"2016-11-20T16:56:14.257Z"}
+{"level":"info","message":"[object Object]: Search op successful for null","timestamp":"2016-11-20T16:56:14.259Z"}
+{"level":"info","message":"/viewData: Retrieved list of imports","timestamp":"2016-11-20T16:56:14.259Z"}
+{"level":"info","message":"[object Object]: Update op successful for [object Object] and [object Object]","timestamp":"2016-11-20T16:56:37.935Z"}

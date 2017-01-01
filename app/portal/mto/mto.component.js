@@ -41,9 +41,9 @@ angular.module('portApp')
                 arrivingTerminal: $scope.shipTerminal,
                 token: authService.getToken()
             }).then(function(response) {
-                alert('YAY!');
+                alert('Updated');
             }, function(response) {
-                 alert('NAY!');
+                 alert('Update failed!');
             });
         };
 
